@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Kyiv Sans";
+  src: url("./fonts/KyivTypeSans-VarGX.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Ancho";
+  src: url("./fonts/AnchoGX.woff2") format("woff2-variations");
+}
+
+:root {
+  --font-weight: 1;
+  --font-midline: 0;
+  --font-contrast: 250;
+
+  --font-weight-sec: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  font-size: 1.5rem;
+
+  background-color: #0f0d0e;
+  color: #0f0d0e;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 12rem;
+  height: 12rem;
+  padding: 0.5rem;
+
+  background-color: #fcba28;
+}
+
+.variable-font {
+  font-family: "Kyiv Sans";
+  font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-contrast), "MIDL" var(--font-midline);
+
+  transition: font-weight 500ms, font-variation-settings 500ms;
+}
+
+.variable-font-second {
+  color: #f8f5e4;
+
+  font-family: "Ancho";
+  font-variation-settings: "wght" var(--font-weight-sec);
+
+  transition: font-weight 500ms, font-variation-settings 500ms;
+}
+
+/* Using this part we can change fonts without JS */
+
+/* .variable-font:hover {
+  --font-weight: 1000;
+  --font-midline: -500;
+  --font-contrast: 1000;
+
+  --font-weight-sec: 1000;
+} */
